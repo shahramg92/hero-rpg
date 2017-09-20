@@ -30,16 +30,13 @@ class Character(object):
 class Hero(Character):
     pass
 
-
 class Goblin(Character):
     pass
 
 class Zombie(Character):
-    def alive(self):
-        return True
-
-
-
+    # def alive(self):
+    #     return True
+    pass
 
 def main():
     hero = Hero('Hero', 10, 5)
@@ -73,11 +70,11 @@ def main():
             goblin.attack(hero)
         if hero.health <= 0:
             print("You are dead.")
-
+            break
         if zombie.health == math.inf:
             zombie.attack(hero)
         if hero.health <=0:
             print("You are dead.")
-
+            break
 
 main()
